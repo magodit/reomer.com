@@ -10,29 +10,26 @@ export default function Header() {
     }
   return (
     <div className="bg-white border-b shadow-sm sticky top-0 z-50">
-        <header className="flex justify-between items-center px-3 max-w-6x1 mx-auto">
+        <header className="flex justify-between items-center px-3 max-w-6x1">
             <div>
                 
-            <img src="https://magprojects.one/logo.png" alt="logo" className="h-12 cursor-pointer"
+            <img src="https://magprojects.one/logo.png" alt="logo" className="h-10 cursor-pointer"
             onClick={()=>navigate("/")}/>
                 
             </div>
             <div>
                 <ul className="flex space-x-10">
                     <li className={`cursor-pointer py-3 text-sm font-semibold 
-                    text-gray-800 border-b-[3px] border-b-transparent
-                    ${ pathMathRoute("/") && "text-black border-b-blue-900" }`}
+                    ${ pathMathRoute("/") && "text-black border-b-[3px] border-b-blue-600" }`}
                     onClick={()=>navigate("/")}
                     >Home</li>
                     <li className={`cursor-pointer py-3 text-sm font-semibold 
-                    text-gray-800 border-b-[3px] border-b-transparent
-                    ${ pathMathRoute("/offers") && "text-black border-b-blue-900" }`}
+                    ${ pathMathRoute("/offers") && "text-black border-b-[3px] border-b-blue-600" }`}
                     onClick={()=>navigate("/offers")}
                     >Offers</li>
                     <li className={`cursor-pointer py-3 text-sm font-semibold 
-                    text-gray-800 border-b-[3px] border-b-transparent
-                    ${ pathMathRoute("/sign-in") && "text-black border-b-blue-900" }`}
-                    onClick={()=>navigate("/sign-in")}
+                    ${ pathMathRoute("/phonesignup") && "text-black border-b-[3px] border-b-blue-600" }`}
+                    onClick={()=>navigate("/phonesignup")}
                     >Sign In</li>
                 </ul>
             </div>
@@ -40,3 +37,4 @@ export default function Header() {
     </div>
   )
 }
+
