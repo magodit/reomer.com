@@ -31,6 +31,10 @@ export default function Header() {
                     ${ pathMathRoute("/phonesignup") && "text-black border-b-[3px] border-b-blue-600" }`}
                     onClick={()=>navigate("/phonesignup")}
                     >Sign In</li>
+                    <li className={`cursor-pointer py-3 text-sm font-semibold 
+                    ${ pathMathRoute("/signup") && "text-black border-b-[3px] border-b-blue-600" }`}
+                    onClick={()=>navigate("/signup")}
+                    >Sign Up</li>
                 </ul>
             </div>
         </header>

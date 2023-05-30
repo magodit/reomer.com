@@ -13,7 +13,7 @@ import { db } from "../firebase";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 
-const PhoneSignUp = () => {
+const PhonePw = () => {
 const [number, setNumber] = useState("");
 const [otp, setOtp] = useState("");
 const [error, setError] = useState("");
@@ -22,14 +22,16 @@ const [confirmObj, setConfirmObj] = useState("");
 
 const [formData, setFormData] = useState({
   email: "",
-  phoneNumber: {number},
+  phone: "",
   password: "",
 });
 
-const { phoneNumber } = formData;
+const { email, phone, password } = formData;
+
 
 const { setUpRecaptcha } = useUserAuth();
 const navigate = useNavigate();
+
 
 const getOtp = async(e) => {
     e.preventDefault();
@@ -63,15 +65,14 @@ const getOtp = async(e) => {
         const auth = getAuth();
         const userCredential = await createUserWithEmailAndPassword(
           auth,
-          
-          phoneNumber,
-         
+          email,
+          phone,
+          password
         
           
         );
         updateProfile(auth.currentUser, {
-          displayName: "set Name",
-          displayPhone: phoneNumber,
+          displayName: email 
         });
         const user = userCredential.user;
         const formDataCopy = { ...formData };
@@ -95,8 +96,10 @@ const getOtp = async(e) => {
       
     
 
+
     
   
+
 
     return (
         <>
@@ -177,4 +180,4 @@ const getOtp = async(e) => {
     );
 };
 
-export default PhoneSignUp;
+export default PhonePw;
