@@ -11,7 +11,8 @@ import {
 } from "firebase/auth";
 import { db } from "../firebase";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const PhoneSignUp = () => {
 const [number, setNumber] = useState("");

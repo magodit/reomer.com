@@ -6,6 +6,8 @@ import ForgotPassword from './pages/ForgotPassword'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Header from './components/header'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import PhoneSignUp from "./pages/PhoneSignUp";
 import PhonePw from "./pages/PhonePw";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
@@ -30,6 +32,18 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword/>}/>
        </Routes>
     </Router>
+    <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </UserAuthContextProvider>
     </>
   )

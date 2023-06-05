@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     background-color: rgb(240, 253, 244);
 }
@@ -10,3 +11,4 @@ header {
     margin-left: 4%;
     margin-right: 4%;
 }
+
