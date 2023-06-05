@@ -75,14 +75,14 @@ try {
         value={name}
         disabled={!changeDetail}
         onChange={onChange}
-        className={`mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out ${
+        className={`w-full px-4 py-2 text-x1 text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out ${
           changeDetail && "bg-red-200 focus:bg-red-200"
         }`} placeholder="Name"/>
 
-        <input type="text" id="name" value={phoneNumber} disabled className="w-full justify-center mt-4 px-4 py-2 text-x1
+        <input type="text" id="name" value={phoneNumber} disabled className="w-full justify-center mt-2 px-4 py-2 text-x1
         text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out " placeholder="Phone Number"/>
 
-        <input type="text" id="name" value={email} disabled className="w-full justify-center mt-4 px-4 py-2 text-x1
+        <input type="text" id="name" value={email} disabled className="w-full justify-center mt-2 px-4 py-2 text-x1
         text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out " placeholder="Email"/>
 
         <div className='flex justify-between whitespace-nowrap text-sm sm:text-m mb-4 mt-2'>

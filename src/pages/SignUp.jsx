@@ -110,7 +110,7 @@ export default function SignUp() {
               value={name}
               onChange={onChange}
               placeholder="Full name"
-              className="mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 
+              className="mb-3 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 
               rounded transition ease-in-out"
             />
                                     <div id="recaptcha-container"></div>
@@ -121,10 +121,10 @@ export default function SignUp() {
               value={email}
               onChange={onChange}
               placeholder="Email address"
-              className="mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 
+              className="mb-3 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 
               rounded transition ease-in-out"
             />
-            <div className="relative mb-6">
+            <div className="relative mb-3">
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
@@ -147,7 +147,7 @@ export default function SignUp() {
               )}
             </div>
             <div className="flex justify-between whitespace-nowrap text-sm sm:text-lg">
-              <p className="mb-6">
+              <p className="mb-3">
                 Have a account?
                 <Link
                   to="/signin"
@@ -173,11 +173,19 @@ export default function SignUp() {
             >
               Sign up
             </button>
-            <div className="flex items-center  my-4 before:border-t before:flex-1
+            <div className="flex items-center  my-2 before:border-t before:flex-1
              before:border-gray-300 after:border-t after:flex-1 after:border-gray-300">
               <p className="text-center font-semibold mx-4">OR</p>
             </div>
             <OAuth />
+            <Link to="/phonesignup">
+            <button
+              className="w-full bg-blue-600 text-white px-7 py-3 mt-2 text-sm font-medium uppercase rounded shadow-md hover:bg-blue-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue-800"
+              type="submit"
+            >
+              Sign in with Phone Number
+            </button>
+            </Link>
           </form>
         </div>
       </div>
